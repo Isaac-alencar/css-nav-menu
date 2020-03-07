@@ -1,0 +1,77 @@
+/* Primeiro, vou setar as configurações padão do navegador para não atrapalhar na estilização*/
+
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+body{
+    background-color: #E6C299;
+}
+li{
+    list-style: none;
+}
+/* Agora estilizando somente o header*/
+header{
+
+    padding: 16px;
+
+    background-color: #212121;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+/* Agora a parte no navbar em si*/
+
+.navbar-conteiner{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    /* 
+        * O display flex, serve aqui neste caso para seprara a Logobrand das ourtas partes do menu, é um padrão que normalmente é adotado
+        *   max-width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            - Estre trecho de código garante que o navbar estará todo alinhado ao centro, como planejado
+            - Dica: Experimente alterar o valor da porcentagem do max-width, para ver como ele funciona.
+    */
+
+
+}
+.menu{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 
+        *O grid template aplicado na UL, permite que tudo que esteja dentro dela se torne um componente que possa ser manipulado
+        assim podemos quebrar os três itens da lista em 3 colunas, que lógico os posicionará na horizontal, como navbar deve ser
+    */
+}
+.logobrand{
+    color: #DB9770;
+}
+.menu-conteiner li{
+
+    padding: 8px 16px;
+    margin-left: 5px;
+
+    /*background-color: #DB9770; */
+    /*
+        * veja ficaram as definições de padding e margin, basta tirar esse coment e usar o Background-color.
+        * Veja como essa esturura pode ser aproveirada para fazer botões, formulários e o que você imaginar.
+    */
+    color: #E6C299;
+    border-radius: 5px;
+
+    text-align: center;
+    font-size: 12pt;
+    font-weight: bold;
+
+}
+
